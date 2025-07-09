@@ -1,0 +1,15 @@
+@if (isLoading) {
+<div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+}@else {
+<div class="row">
+    @for (item of allFoods; track $index) {
+    <div class="col-md-4">
+        <img [src]="item.image_url" class="w-100" alt="">
+        <h2> {{item.title}} </h2>
+        <p> {{item.social_rank}} </p>
+    </div>
+    }
+</div>
+}

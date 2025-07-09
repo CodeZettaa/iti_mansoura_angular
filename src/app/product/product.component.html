@@ -1,0 +1,11 @@
+<!-- <a routerLink="/details/{{user()?.id}}"> -->
+<a [routerLink]="['/details', user()?.id]">
+
+    <div class="border border-3 border-danger rounded rounded-4 overflow-hidden">
+        <img [src]="user()?.photo" class="w-100" alt="">
+        <div class="p-4">
+            <h2>UserName: {{user()?.name}}</h2>
+            <h5>UserAge: {{user()?.age}}</h5>
+        </div>
+    </div>
+</a>

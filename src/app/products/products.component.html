@@ -1,0 +1,19 @@
+<div class="bg-info p-5">
+    <h2>hello from Productssssss. {{title}} </h2>
+
+
+    <div class="row">
+        @for (user of users; track $index; let last = $first;) {
+        <div class="col-md-4">
+            <app-product [user]="user" (sendMessage)="displayMessage($event)" [title]="productTitle"></app-product>
+
+        </div>
+        } @empty {
+        <h3>No result to display</h3>
+        }
+
+
+    </div>
+
+
+</div>
